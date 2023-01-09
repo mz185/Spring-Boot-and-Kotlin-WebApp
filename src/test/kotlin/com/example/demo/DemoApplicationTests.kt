@@ -21,7 +21,7 @@ class DemoApplicationTests(@Autowired val restTemplate: TestRestTemplate) {
 	@Test
 	fun `Assert greeting page name`() {
 		restTemplate.getForEntity<String>("/hello?name=marino").run {
-			assertThat(body).contains("Hello marino!")
+			assertThat(body).contains("Hello marino! Your age is 0.")
 		}
 	}
 }
